@@ -15,51 +15,78 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/353ec34ec9.js" crossorigin="anonymous"></script>
+
+    <!-- custom color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'bg-color': "#F85559"
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- styles -->
     <style>
-        .font-lato{
+        body{
             font-family: 'Lato', sans-serif;
         }
     </style>
 </head>
-<body class="font-lato">
-    <header class="container lg:w-[80%] mx-auto mt-6">
-        <!-- navbar section -->
-        <nav>
-            <div class="navbar lg:bg-[#F85559] rounded-full">
-                <div class="navbar-start hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1 text-white text-base font-medium">
-                    <li><a>Home</a></li>
-                    <li><a>About Us</a></li>
-                    <li><a>Shop</a></li>
-                    <li><a>All Fruits</a></li>
-                  </ul>
+<body>
+    <header class="container lg:w-[90%] mx-auto">
+        <!-- navbar section starts here-->
+        <nav class="container mx-auto px-5 md:py-3 md:bg-bg-color rounded-full my-5">
+            <div class="navbar px-0">
+                <div class="navbar-start hidden md:w-2/5 lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
                 </div>
-                <div class="navbar-center">
-                        <img src="./images/logo.png" alt="">
-                        <a class="btn btn-ghost normal-case lg:text-4xl lg:text-white">Fruit Burst</a>
-                  </div>
-                <div class="navbar-end">
-                    <div class="search-container bg-white p-2 mr-2 rounded-full hidden sm:block">
-                        <input type="text" class="search-input" placeholder="Search...">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="navbar-center w-full justify-between lg:justify-center lg:w-1/5">
+                    <div>
+                        <a
+                            class="btn btn-ghost normal-case text-xl font-bold md:text-white px-0 justify-start md:justify-center"><img
+                                class="w-1/4" src="./images/logo.png" alt="">Fruit Burst</a>
                     </div>
-                    <div class="dropdown dropdown-end">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost px-0 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
                         </label>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content text-base mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content h-44 md:h-32 right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-60">                           
                             <li><a>Home</a></li>
                             <li><a>About Us</a></li>
                             <li><a>Shop</a></li>
-                            <li><a>All Fruits</a></li>
+                            <li><a>All Fruits</a></li>         
+                            <div class="absolute flex md:hidden top-32 border-none md:mr-5">
+                                <input class="py-1 px-2 rounded-full" type="text" placeholder="Search here..">
+                                <button type="search"><i class="fa-solid fa-magnifying-glass relative right-8"></i></button>
+                            </div>                   
                         </ul>
-                      </div>
+                    </div>
                 </div>
-
+                <div class="navbar-end hidden md:flex md:w-2/5">
+                    <div class="absolute md:mr-5">
+                        <input class="py-2 px-3 rounded-full" type="text" placeholder="Search here..">
+                        <button type="search"><i class="fa-solid fa-magnifying-glass relative right-8"></i></button>
+                    </div>
+                </div>
+            </div>
         </nav>
+        <!-- navbar section ends here -->
 
-        <!-- banner section -->
-        
+        <!-- banner section starts here -->  
     </header>
     <main>
 
